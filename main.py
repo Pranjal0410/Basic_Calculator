@@ -1,9 +1,48 @@
-def replace_word():
+def add(a, b):
+    answer = a + b
+    print(str(a) + "+" + str(b) + "=" + str(answer))
 
-    str="hi guys, I am Priya, and I love to draw"
-    word_to_replace= input("Enter the word to replace: ")
-    word_replacement = input("Enter the word replacement: ")
-    print(str.replace(word_to_replace, word_replacement))
+def sub(a, b):
+    answer = a-b
+    print(str(a) + "-" + str(b) + "=" + str(answer))
 
-replace_word()
+def mul(a, b):
+    answer = a*b
+    print(str(a) + "*"+ str(b) + "="+ str(answer))
 
+def div(a, b):
+    answer = a / b
+    print(str(a) + "/" + str(b) + "=" + str(answer))
+
+
+print("A. Addition")
+print("B. Subtraction")
+print("C. Multiplication")
+print("D. Division")
+print("E. Exit")
+
+choice = input("input your choice: ")
+
+if choice == "a" or choice == "A":
+    print("Addition")
+    a = int(input("input first number:"))
+    b = int(input("input second number:"))
+    add(a, b)
+elif choice == "b" or choice == "B":
+    print("Subtraction")
+    a = int(input("input first number:"))
+    b = int(input("input second number:"))
+    sub(a, b)
+elif choice == "c" or choice == "C":
+    print("Multiplication")
+    a = int(input("input first number:"))
+    b = int(input("input second number:"))
+    mul(a, b)
+if choice == "d" or choice == "D":
+    print("Division")
+    a = int(input("input first number:"))
+    b = int(input("input second number:"))
+    div(a, b)
+elif choice== "e" or choice == "E":
+    print("Exit")
+    quit()
